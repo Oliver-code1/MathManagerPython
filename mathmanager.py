@@ -30,28 +30,11 @@ class mathmanager:
 	def tax(self, income):
 		if (income >= 0 and income <= 12570):
 			return 0
-
-		elif (income > 12570 and 
+		elif (income > 12570 and income<= 50270):
+			return 20/100*(income- 12570)
+		elif (income 
 
 
 
 	
-	def calculate_monthly_interest(principal, annual_rate, years):
-    """
-    Calculate the monthly interest gained for a savings account.
-
-    :param principal: The initial amount of money deposited (float).
-    :param annual_rate: The annual interest rate in percentage (float).
-    :param years: The number of years the money is saved (int).
-    :return: Monthly interest gained (float).
-    """
-    # Convert annual rate to decimal
-    annual_rate_decimal = annual_rate / 100
-
-    # Calculate total interest for the given years
-    total_interest = principal * annual_rate_decimal * years
-
-    # Calculate monthly interest
-    monthly_interest = total_interest / (years * 12)
-
-    return monthly_interest
+	
